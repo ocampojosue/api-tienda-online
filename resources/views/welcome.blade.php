@@ -18,10 +18,11 @@
         <style>
             body {
                 font-family: 'Nunito', sans-serif;
+                background-color:#dfdfdf;
             }
         </style>
     </head>
-    <body>
+    <body style="background-color:#dfdfdf;">
         {{-- <body class="antialiased"> --}}
         {{-- <div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center py-4 sm:pt-0">
             @if (Route::has('login'))
@@ -81,53 +82,229 @@
                 </div>
             </div>
         </div> --}}
-        <div class="container mt-5">
+        <div class="container mt-4">
             <div class="row">
                 <div class="col-md-12">
-                    <div class="card">
-                        <div class="card-header text-center">
-                            <h2 class="font-weight-bold">Api Tienda Online</h2>
+                    <div class="card shadow rounded w-75 mx-auto">
+                        <div class="mt-3">
+                            <h2 class="font-weight-bold text-center">Api Tienda Online</h2>
                         </div>
                         <div class="card-body">
-                            API REST para la materia de Tecnología de Dispositivos Móviles
+                            API REST para la materia de Tecnología Móviles. La Api Rest consta de los siguientes recursos:
+                            <li class="ml-3">
+                                CRUD para <a href="http://apitienda.test/api/categories" target="__blank">Categorías</a>
+                            </li>
+                            <li class="ml-3">
+                                CRUD para <a href="http://apitienda.test/api/products" target="__blank">Productos</a>
+                            </li>
+                            <li class="ml-3">
+                                CRUD para <a href="http://apitienda.test/api/users" target="__blank">Usuarios</a>
+                            </li>
                         </div>
                     </div>
                 </div>
             </div>
             <br>
             <div class="row">
-                <div class="col-md-4 mb-3">
-                    <div class="card">
-                        <div class="card-header text-center">
-                        <h3>Api Tienda Online</h3>
-                    </div>
-                    <div class="card-body">Cuerpo de Página</div>
-                    <div class="card-footer">Pie de Página</div>
+                <div class="col-xl-4">
+                    <div class="card shadow-lg rounded mb-2 pb-1">
+                        <div class="border-bottom font-weight-bold text-center h4 py-1">
+                            Categorías
+                        </div>
+                        <div class="px-2">
+                            <div class="row">
+                                <div class="col-3">
+                                    <div class="border-bottom font-weight-bold">
+                                        Petición
+                                    </div>
+                                    <div class="">
+                                        GET <br>
+                                        GET <br>
+                                        POST <br>
+                                        PUT <br>
+                                        DELETE <br>
+                                    </div>
+                                </div>
+                                <div class="col-3 border-left border-right">
+                                    <div class="border-bottom font-weight-bold">
+                                        Método
+                                    </div>
+                                    Index <br>
+                                    Show <br>
+                                    Store <br>
+                                    Update <br>
+                                    Delete <br>
+                                </div>
+                                <div class="col-6">
+                                    <div class="border-bottom font-weight-bold">
+                                        URL
+                                    </div>
+                                    <a href="http://apitienda.test/api/categories" target="__blank">/api/categories</a><br>
+                                    <a href="http://apitienda.test/api/categories" target="__blank">/api/categories/{id}</a><br>
+                                    <a href="#">/api/categories</a><br>
+                                    <a href="#">/api/categories/{id}</a><br>
+                                    <a href="#">/api/categories/{id}</a><br>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="col-md-4 mb-3">
-                    <div class="card">
-                        <div class="card-header text-center">
-                        <h3>Api Tienda Online</h3>
-                    </div>
-                    <div class="card-body">Cuerpo de Página</div>
-                    <div class="card-footer">Pie de Página</div>
+                <div class="col-xl-4">
+                    <div class="card shadow-lg rounded mb-2 pb-1">
+                        <div class="border-bottom font-weight-bold text-center h4 py-1">
+                            Productos
+                        </div>
+                        <div class="px-2">
+                            <div class="row">
+                                <div class="col-3">
+                                    <div class="border-bottom font-weight-bold">
+                                        Petición
+                                    </div>
+                                    <div class="">
+                                        GET <br>
+                                        GET <br>
+                                        POST <br>
+                                        PUT <br>
+                                        DELETE <br>
+                                    </div>
+                                </div>
+                                <div class="col-3 border-left border-right">
+                                    <div class="border-bottom font-weight-bold">
+                                        Método
+                                    </div>
+                                    Index <br>
+                                    Show <br>
+                                    Store <br>
+                                    Update <br>
+                                    Delete <br>
+                                </div>
+                                <div class="col-6">
+                                    <div class="border-bottom font-weight-bold">
+                                        URL
+                                    </div>
+                                    <a href="http://apitienda.test/api/categories" target="__blank">/api/products</a><br>
+                                    <a href="http://apitienda.test/api/categories" target="__blank">/api/products/{id}</a><br>
+                                    <a href="#">/api/products</a><br>
+                                    <a href="#">/api/products/{id}</a><br>
+                                    <a href="#">/api/products/{id}</a><br>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="card">
-                        <div class="card-header text-center">
-                        <h3>Api Tienda Online</h3>
-                    </div>
-                    <div class="card-body">Cuerpo de Página</div>
-                    <div class="card-footer">Pie de Página</div>
+                <div class="col-xl-4">
+                    <div class="card shadow-lg rounded mb-2 pb-1">
+                        <div class="border-bottom font-weight-bold text-center h4 py-1">
+                            Usuarios
+                        </div>
+                        <div class="px-2">
+                            <div class="row">
+                                <div class="col-3">
+                                    <div class="border-bottom font-weight-bold">
+                                        Petición
+                                    </div>
+                                    <div class="">
+                                        GET <br>
+                                        GET <br>
+                                        POST <br>
+                                        PUT <br>
+                                        DELETE <br>
+                                    </div>
+                                </div>
+                                <div class="col-3 border-left border-right">
+                                    <div class="border-bottom font-weight-bold">
+                                        Método
+                                    </div>
+                                    Index <br>
+                                    Show <br>
+                                    Store <br>
+                                    Update <br>
+                                    Delete <br>
+                                </div>
+                                <div class="col-6">
+                                    <div class="border-bottom font-weight-bold">
+                                        URL
+                                    </div>
+                                    <a href="http://apitienda.test/api/users" target="__blank">/api/users</a><br>
+                                    <a href="http://apitienda.test/api/users/1" target="__blank">/api/users/{id}</a><br>
+                                    <a href="#">/api/users</a><br>
+                                    <a href="#">/api/users/{id}</a><br>
+                                    <a href="#">/api/users/{id}</a><br>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
+                {{-- <div class="col-md-4">
+                    <div class="card shadow-lg rounded mb-2">
+                    <div class="mt-2 border-bottom">
+                        <h4 class="font-weight-bold text-center">Productos</h4>
+                    </div>
+                    <div class="px-4 py-2">
+                        Métodos HTTP <br>
+                        <div class="row text-center">
+                            <div class="col-3 ">
+                                GET <br>
+                                GET <br>
+                                POST <br>
+                                PUT <br>
+                                DELETE <br>
+                            </div>
+                            <div class="col-4 border-left border-right">
+                                Index <br>
+                                Show <br>
+                                Store <br>
+                                Update <br>
+                                Delete <br>
+                            </div>
+                            <div class="col-5">
+                                <a href="http://apitienda.test/api/categories">/api/categories</a><br>
+                                <a href="http://apitienda.test/api/categories">/api/categories</a><br>
+                                <a href="http://apitienda.test/api/categories">/api/categories</a><br>
+                                <a href="http://apitienda.test/api/categories">/api/categories</a><br>
+                                <a href="http://apitienda.test/api/categories">/api/categories</a><br>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </div> --}}
+                {{-- <div class="col-md-4">
+                    <div class="card shadow-lg rounded">
+                    <div class="mt-2 border-bottom">
+                        <h4 class="font-weight-bold text-center">Usuarios</h4>
+                    </div>
+                    <div class="px-4 py-2">
+                        Métodos HTTP <br>
+                        GET - Index <a href="http://apitienda.test/api/categories">/api/categories</a><br>
+                        GET	- Show <a href="http://apitienda.test/api/categories/1">/api/categories/1</a><br>
+                        POST - Store <a href="http://apitienda.test/api/categories">/api/categories</a><br>
+                        PUT	- Update <a href="http://apitienda.test/api/categories">/api/categories/{id}</a><br>
+                        DELETE - Delete <a href="http://apitienda.test/api/categories">/api/categories</a><br>
+                    </div>
+                    </div>
+                </div> --}}
+                {{-- <div class="col-md-4">
+                    <div class="card shadow-lg rounded mb-2">
+                    <div class="mt-2 border-bottom">
+                        <h4 class="font-weight-bold text-center">Categorías</h4>
+                    </div>
+                    <div class="px-4 py-2">
+                        Métodos HTTP <br>
+                        GET - Index <a href="http://apitienda.test/api/categories">/api/categories</a><br>
+                        GET	- Show <a href="http://apitienda.test/api/categories/1">/api/categories/1</a><br>
+                        POST - Store <a href="http://apitienda.test/api/categories">/api/categories</a><br>
+                        PUT	- Update <a href="http://apitienda.test/api/categories">/api/categories/{id}</a><br>
+                        DELETE - Delete <a href="http://apitienda.test/api/categories">/api/categories</a><br>
+                    </div>
+                    </div>
+                </div> --}}
             </div>
         </div>
-        <footer class="text-center fixed-bottom bg-dark text-white ">
-            <p class="font-italic font-weight-bold">By Ocampo Josue</p>
-        </footer>
+        <footer class="page-footer font-small blue fixed-bottom d-none d-md-none d-lg-block">
+            <div class="text-center py-1">
+                © 2021 Copyright{{--Designed By Ocampo Josue--}}
+            </div>
+          </footer>
         <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js" integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous"></script>

@@ -16,8 +16,8 @@ class ProductFactory extends Factory
     {
         return [
             'name' => $this->faker->sentence($nbWords = 2, $variableNbWords = false),
-            'cost' => $this->faker->randomFloat($nbMaxDecimals = null, $min = 6, $max = 8),
-            'price' => $this->faker->randomFloat($nbMaxDecimals = null, $min = 2, $max = 4),
+            'cost' => $this->faker->randomFloat($nbMaxDecimals = 2, $min = 6, $max = 8),
+            'price' => $this->faker->randomFloat($nbMaxDecimals = 2, $min = 2, $max = 4),
             'stock' => $this->faker->numberBetween(100,1000),
             'category_id' => Category::all()->random()->id,
         ];
