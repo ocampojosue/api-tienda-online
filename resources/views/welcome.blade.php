@@ -92,13 +92,13 @@
                         <div class="card-body">
                             API REST para la materia de Tecnología Móviles. La Api Rest consta de los siguientes recursos:
                             <li class="ml-3">
-                                CRUD para <a href="http://apitienda.test/api/categories" target="__blank">Categorías</a>
+                                CRUD para <a href="http://apitienda.test/api/categories" target="_blank">Categorías</a>
                             </li>
                             <li class="ml-3">
-                                CRUD para <a href="http://apitienda.test/api/products" target="__blank">Productos</a>
+                                CRUD para <a href="http://apitienda.test/api/products" target="_blank">Productos</a>
                             </li>
                             <li class="ml-3">
-                                CRUD para <a href="http://apitienda.test/api/users" target="__blank">Usuarios</a>
+                                CRUD para <a href="http://apitienda.test/api/users" target="_blank">Usuarios</a>
                             </li>
                         </div>
                     </div>
@@ -139,8 +139,8 @@
                                     <div class="border-bottom font-weight-bold">
                                         URL
                                     </div>
-                                    <a href="https://api-tienda-online.herokuapp.com/api/categories" target="__blank">/api/categories</a><br>
-                                    <a href="https://api-tienda-online.herokuapp.com/api/categories/1" target="__blank">/api/categories/{id}</a><br>
+                                    <a href="https://api-tienda-online.herokuapp.com/api/categories" target="_blank">/api/categories</a><br>
+                                    <a href="https://api-tienda-online.herokuapp.com/api/categories/1" target="_blank">/api/categories/{id}</a><br>
                                     <a href="#">/api/categories</a><br>
                                     <a href="#">/api/categories/{id}</a><br>
                                     <a href="#">/api/categories/{id}</a><br>
@@ -182,8 +182,8 @@
                                     <div class="border-bottom font-weight-bold">
                                         URL
                                     </div>
-                                    <a href="https://api-tienda-online.herokuapp.com/api/products" target="__blank">/api/products</a><br>
-                                    <a href="https://api-tienda-online.herokuapp.com/api/products/1" target="__blank">/api/products/{id}</a><br>
+                                    <a href="https://api-tienda-online.herokuapp.com/api/products" target="_blank">/api/products</a><br>
+                                    <a href="https://api-tienda-online.herokuapp.com/api/products/1" target="_blank">/api/products/{id}</a><br>
                                     <a href="#">/api/products</a><br>
                                     <a href="#">/api/products/{id}</a><br>
                                     <a href="#">/api/products/{id}</a><br>
@@ -225,8 +225,8 @@
                                     <div class="border-bottom font-weight-bold">
                                         URL
                                     </div>
-                                    <a href="https://api-tienda-online.herokuapp.com/api/users" target="__blank">/api/users</a><br>
-                                    <a href="https://api-tienda-online.herokuapp.com/api/users/1" target="__blank">/api/users/{id}</a><br>
+                                    <a href="https://api-tienda-online.herokuapp.com/api/users" target="_blank">/api/users</a><br>
+                                    <a href="https://api-tienda-online.herokuapp.com/api/users/1" target="_blank">/api/users/{id}</a><br>
                                     <a href="#">/api/users</a><br>
                                     <a href="#">/api/users/{id}</a><br>
                                     <a href="#">/api/users/{id}</a><br>
