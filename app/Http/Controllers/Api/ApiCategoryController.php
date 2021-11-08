@@ -9,7 +9,7 @@ use Illuminate\Http\Request;
 class ApiCategoryController extends Controller
 {
     public function index(){
-        $categories = Category::all();
+        $categories = Category::orderBy('created_at','desc')->get();
         return response()->json($categories, 200);
     }
 

@@ -9,7 +9,7 @@ use Illuminate\Http\Request;
 class ApiProductController extends Controller
 {
     public function index(){
-        $products = Product::all();
+        $products = Product::orderBy('created_at','desc')->get();
         return response()->json($products, 200);
     }
 

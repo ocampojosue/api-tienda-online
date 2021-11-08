@@ -10,7 +10,7 @@ class ApiUserController extends Controller
 {
     public function index(){
         //$users = User::get(['name', 'email', 'email_verified_at', 'created_at', 'updated_at']);//Traer solo los campos indicados
-        $users = User::all();
+        $users = User::orderBy('created_at','desc')->get();
         return response()->json($users, 200);
     }
 

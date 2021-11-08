@@ -92,13 +92,13 @@
                         <div class="card-body">
                             API REST para la materia de Tecnología Móviles. La Api Rest consta de los siguientes recursos:
                             <li class="ml-3">
-                                CRUD para <a href="http://apitienda.test/api/categories" target="_blank">Categorías</a>
+                                CRUD para <a href="https://api-tienda-online.herokuapp.com/api/categories" target="_blank">Categorías</a>
                             </li>
                             <li class="ml-3">
-                                CRUD para <a href="http://apitienda.test/api/products" target="_blank">Productos</a>
+                                CRUD para <a href="https://api-tienda-online.herokuapp.com/api/products" target="_blank">Productos</a>
                             </li>
                             <li class="ml-3">
-                                CRUD para <a href="http://apitienda.test/api/users" target="_blank">Usuarios</a>
+                                CRUD para <a href="https://api-tienda-online.herokuapp.com/api/users" target="_blank">Usuarios</a>
                             </li>
                         </div>
                     </div>
