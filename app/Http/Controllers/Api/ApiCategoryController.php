@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Api;
 use App\Http\Controllers\Controller;
 use App\Models\Category;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Validator;
 
 class ApiCategoryController extends Controller
 {
@@ -14,13 +15,27 @@ class ApiCategoryController extends Controller
     }
 
     public function store(Request $request){
-        $request->validate([
-            'name' => 'required',
-            'description' => 'required',
-        ]);
+        try {
+            $rules = [
+                'name' => 'required|unique:categories',
+                'description' => 'required'
+            ];
+            $messages = [
+                'required' => 'El campo :attribute es requerido',
+                'name.unique' => 'La categoria ya Existe'
+            ];
+            $validator = Validator::make($request->all(),$rules, $messages);
 
-        $categories = Category::create($request->all());
-        return response()->json($categories, 200);
+            if ($validator->fails()) {
+                return jsend_fail($validator->errors());
+            }
+            return jsend_success(Category::create($request->all()), 201);
+        } catch (\Exception $e) {
+            return jsend_error($e);
+        }
+
+        // $categories = Category::create($request->all());
+        // return response()->json($categories, 200);
     }
 
     public function show($id){
