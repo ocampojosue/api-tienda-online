@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Api;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\User;
+use Illuminate\Support\Facades\Validator;
 
 class ApiUserController extends Controller
 {
@@ -20,8 +21,26 @@ class ApiUserController extends Controller
         //     'description' => 'required',
         // ]);
 
-        $users = User::create($request->all());
-        return response()->json($users, 200);
+        // $users = User::create($request->all());
+        // return response()->json($users, 200);
+        try {
+            $rules = [
+                'name' => 'required|unique:users',
+                'email' => 'required|unique:users'
+            ];
+            $messages = [
+                'required' => 'El campo :attribute es requerido',
+                'unique' => 'El campo :attribute ya Existe'
+            ];
+            $validator = Validator::make($request->all(),$rules, $messages);
+
+            if ($validator->fails()) {
+                return jsend_fail($validator->errors());
+            }
+            return jsend_success(User::create($request->all()), 201);
+        } catch (\Exception $e) {
+            return jsend_error($e);
+        }
     }
 
     public function show($id){
@@ -30,8 +49,26 @@ class ApiUserController extends Controller
     }
 
     public function update(Request $request, $id){
-        User::findOrFail($id)->update($request->all());
-        return response()->json("EL registro de ID $id fue actualizado", 200);
+        // User::findOrFail($id)->update($request->all());
+        // return response()->json("EL registro de ID $id fue actualizado", 200);
+        try {
+            $rules = [
+                'name' => "required|unique:users,name,$id",
+                'email' => "required|unique:users,email,$id"
+            ];
+            $messages = [
+                'required' => 'El campo :attribute es requerido',
+                'unique' => 'El campo :attribute ya Existe'
+            ];
+            $validator = Validator::make($request->all(),$rules, $messages);
+
+            if ($validator->fails()) {
+                return jsend_fail($validator->errors());
+            }
+            return jsend_success(User::findOrFail($id)->update($request->all()), 200);
+        } catch (\Exception $e) {
+            return jsend_error($e);
+        }
     }
 
     public function destroy($id){

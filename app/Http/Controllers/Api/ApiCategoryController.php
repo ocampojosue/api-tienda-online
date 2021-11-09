@@ -44,8 +44,26 @@ class ApiCategoryController extends Controller
     }
 
     public function update(Request $request, $id){
-        $category = Category::findOrFail($id)->update($request->all());
-        return response()->json("EL registro de ID $id fue actualizado", 200);
+        try {
+            $rules = [
+                'name' => "required|unique:categories,name,$id",
+                'description' => 'required'
+            ];
+            $messages = [
+                'required' => 'El campo :attribute es requerido',
+                'name.unique' => 'La categoria ya Existe'
+            ];
+            $validator = Validator::make($request->all(),$rules, $messages);
+
+            if ($validator->fails()) {
+                return jsend_fail($validator->errors());
+            }
+            return jsend_success(Category::findOrFail($id)->update($request->all()));
+        } catch (\Exception $e) {
+            return jsend_error($e);
+        }
+        // Category::findOrFail($id)->update($request->all());
+        // return response()->json("EL registro de ID $id fue actualizado", 200);
     }
 
     public function destroy($id){
