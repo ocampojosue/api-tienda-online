@@ -21,7 +21,7 @@
                 <div class="col-lg-12">
                     <div class="card shadow rounded my-2 mx-auto w-100">
                         <div class="mt-3">
-                            <h2 class="font-weight-bold text-center">Api Tienda Online</h2>
+                            <h2 class="font-weight-bold text-center">Tecnologías Móviles 2021 U.A.J.M.S</h2>
                         </div>
                     </div>
                 </div>
