@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Tag;
 use App\Models\User;
 use Illuminate\Database\Seeder;
 
@@ -16,8 +17,9 @@ class DatabaseSeeder extends Seeder
     {
         // \App\Models\User::factory(10)->create();
         $this->call(CategorySeeder::class);
+        $this->call(TagSeeder::class);
         $this->call(ProductSeeder::class);
         $this->call(UserSeeder::class);
-        // User::factory(15)->create();
+        // Tag::factory(15)->create();
     }
 }

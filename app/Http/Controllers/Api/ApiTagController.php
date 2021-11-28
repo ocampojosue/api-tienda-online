@@ -1,0 +1,74 @@
+<?php
+
+namespace App\Http\Controllers\Api;
+
+use App\Http\Controllers\Controller;
+use App\Models\Tag;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Validator;
+
+class ApiTagController extends Controller
+{
+    public function index(){
+        $tag = Tag::orderBy('id','desc')->get();
+        return response()->json($tag, 200);
+    }
+
+    public function store(Request $request){
+        try {
+            $rules = [
+                'name' => 'required|unique:categories',
+                'description' => 'required'
+            ];
+            $messages = [
+                'required' => 'El campo :attribute es requerido',
+                'name.unique' => 'La Etiqueta ya Existe'
+            ];
+            $validator = Validator::make($request->all(),$rules, $messages);
+
+            if ($validator->fails()) {
+                return jsend_fail($validator->errors());
+            }
+            return jsend_success(Tag::create($request->all()), 201);
+        } catch (\Exception $e) {
+            return jsend_error($e);
+        }
+
+        // $categories = Category::create($request->all());
+        // return response()->json($categories, 200);
+    }
+
+    public function show($id){
+        $tag = Tag::findOrFail($id);
+        return response()->json($tag, 200);
+    }
+
+    public function update(Request $request, $id){
+        try {
+            $rules = [
+                'name' => "required|unique:categories,name,$id",
+                'description' => 'required'
+            ];
+            $messages = [
+                'required' => 'El campo :attribute es requerido',
+                'name.unique' => 'La Etiqueta ya Existe'
+            ];
+            $validator = Validator::make($request->all(),$rules, $messages);
+
+            if ($validator->fails()) {
+                return jsend_fail($validator->errors());
+            }
+            return jsend_success(Tag::findOrFail($id)->update($request->all()));
+        } catch (\Exception $e) {
+            return jsend_error($e);
+        }
+        // Category::findOrFail($id)->update($request->all());
+        // return response()->json("EL registro de ID $id fue actualizado", 200);
+    }
+
+    public function destroy($id){
+        Tag::destroy($id);
+        // return "'EL registro de ID $id fue eliminado'";
+        return response()->json("EL registro de ID $id fue eliminado", 200);
+    }
+}
